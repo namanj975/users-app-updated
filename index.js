@@ -2,7 +2,7 @@
  * @Author: naman jain(namanj975@gmail.com) 
  * @Date: 2021-12-28 18:46:13 
  * @Last Modified by: naman jain(namanj975@gmail.com)
- * @Last Modified time: 2022-01-12 01:44:11
+ * @Last Modified time: 2022-01-14 19:41:38
  */
 
 import { connectDb } from './db/connection'
@@ -52,9 +52,10 @@ process.on("unhandledRejection", (reason, promise) => {
 process.on('uncaughtException', function (err) {
     console.error("Exceptions has been caught", err);
 })
-
-initiateProcess();
-
 mongoose.connection.on('connecting', result => {
     console.log("connecting to the mongodb database")
   });
+
+
+initiateProcess();
+
