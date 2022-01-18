@@ -2,7 +2,7 @@
  * @Author: naman jain(namanj975@gmail.com) 
  * @Date: 2021-12-28 18:46:13 
  * @Last Modified by: naman jain(namanj975@gmail.com)
- * @Last Modified time: 2022-01-14 19:41:38
+ * @Last Modified time: 2022-01-16 23:24:31
  */
 
 import { connectDb } from './db/connection'
@@ -10,7 +10,8 @@ import initialProcess from './initialProcessHandler';
 import express from 'express';
 import configuration from './appConfig.js';
 import appRoutes from './routes/index';
-const mongoose = require('mongoose');
+import dbEvents from './db/dbEvents';
+import dbLogger from './db/dbLogger';
 
 const app = express()
 app.set('appPort', configuration.port);
@@ -52,10 +53,6 @@ process.on("unhandledRejection", (reason, promise) => {
 process.on('uncaughtException', function (err) {
     console.error("Exceptions has been caught", err);
 })
-mongoose.connection.on('connecting', result => {
-    console.log("connecting to the mongodb database")
-  });
-
 
 initiateProcess();
 
