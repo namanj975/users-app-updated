@@ -1,12 +1,13 @@
 {
-  "name": "user-app",
-  "version": "1.0.0",
+  "name": "user-app-nj-geek",
+  "version": "1.0.1",
   "description": "App developed to to get the users information",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node -r esm ./index",
     "dev": "nodemon -r esm ./index",
+    "no_color": "nodemon -r esm ./index --no-color",
     "debug": "DEBUG=* nodemon -r esm ./index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,16 +15,17 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
-    "chalk": "^5.0.0",
+    "colors": "^1.4.0",
     "crypto-js": "^4.1.1",
     "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.2",
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.3"
+    "mongoose": "^6.1.7"
   },
   "devDependencies": {
+    "mongoose5": "npm:mongoose@^5.13.14",
     "nodemon": "^2.0.15"
   }
 }

@@ -2,7 +2,7 @@
  * @Author: naman jain(namanj975@gmail.com) 
  * @Date: 2021-12-28 18:46:13 
  * @Last Modified by: naman jain(namanj975@gmail.com)
- * @Last Modified time: 2022-01-16 23:24:31
+ * @Last Modified time: 2022-01-24 22:51:31
  */
 
 import { connectDb } from './db/connection'
@@ -12,10 +12,12 @@ import configuration from './appConfig.js';
 import appRoutes from './routes/index';
 import dbEvents from './db/dbEvents';
 import dbLogger from './db/dbLogger';
+import colors from 'colors';
 
+colors.setTheme(configuration.loggerColor); // for setting the logger theme
+console.log("in index".rainbow)
 const app = express()
 app.set('appPort', configuration.port);
-
 app.all('/', (req, res) => {
     console.log("this withot mount called",req.method);
     res.send('Hello World!')
