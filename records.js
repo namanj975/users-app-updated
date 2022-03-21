@@ -1,7 +1,9 @@
 import mongoose from 'mongoose';
 import configuration from './appConfig.js';
 import {encryptMessage , decryptMessage } from './encryptDecrypt';
-
+let ob2 = mongoose.Types.ObjectId();
+let ob3 = new mongoose.Types.ObjectId();
+console.log("ob2 and ob3",ob2,ob3,typeof ob2,ob2.constructor.name,ob3.constructor.name);
 let ObjectId = mongoose.Types.ObjectId
 global.superAdminRoleId = new ObjectId();
 global.adminRoleId = new ObjectId();

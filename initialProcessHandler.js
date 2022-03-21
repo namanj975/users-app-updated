@@ -2,7 +2,7 @@
  * @Author: naman jain(namanj975@gmail.com) 
  * @Date: 2021-12-28 18:36:00 
  * @Last Modified by: naman jain(namanj975@gmail.com)
- * @Last Modified time: 2022-01-16 23:21:28
+ * @Last Modified time: 2022-03-11 19:22:16
  */
 
 import User from './db/schema/users';
